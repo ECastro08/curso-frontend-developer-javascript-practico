@@ -32,12 +32,18 @@ function toggleMobileMenu() {
 
 function toggleCarrito() {
     const isMobileMenuClosed = mobileMenu.classList.contains('inactive');
-  
-  if (!isMobileMenuClosed) {
-    mobileMenu.classList.add('inactive'); 
-  }
-  
-  aside.classList.toggle('inactive');
+    const isDesktopMenuClosed = desktopMenu.classList.contains('inactive');
 
+    if (!isMobileMenuClosed) {
+    mobileMenu.classList.add('inactive'); 
+  } else if (!isDesktopMenuClosed) {
+    desktopMenu.classList.add('inactive');
+  }
+    aside.classList.toggle('inactive');
 }
+
+  
+
+
+
    
